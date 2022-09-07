@@ -36,7 +36,7 @@ resource "aws_s3_bucket_replication_configuration" "kwan_example" {
 }
 
 resource "aws_s3_bucket_server_side_encryption_configuration" "kwan_example" {
-  bucket = local.kwan_example_name
+  bucket = aws_s3_bucket.kwan_example.bucket
   rule {
     apply_server_side_encryption_by_default {
       kms_master_key_id = aws_kms_key.kwan_example.arn
