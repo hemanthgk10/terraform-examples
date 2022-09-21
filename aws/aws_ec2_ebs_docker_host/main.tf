@@ -11,6 +11,7 @@ resource "aws_instance" "this" {
   tags                   = "${merge(var.tags, map("Name", "${var.hostname}"))}"
   volume_tags            = "${merge(var.tags, map("Name", "${var.hostname}"))}" # give the root EBS volume a name (+ other possible tags) that makes it easier to identify as belonging to this host
 
+  associate_public_ip_address = true
   root_block_device {
     volume_size = "${var.root_volume_size}"
   }
