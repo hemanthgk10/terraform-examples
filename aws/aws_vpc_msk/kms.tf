@@ -1,6 +1,7 @@
 resource "aws_kms_key" "pca-kms" {
   description         = "KMS Key for encrypting the PCA s3 bucket"
   enable_key_rotation = "false"
+  
   policy              = <<EOF
 {
     "Version": "2012-10-17",
