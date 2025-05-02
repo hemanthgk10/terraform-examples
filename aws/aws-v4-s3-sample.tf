@@ -20,13 +20,14 @@ resource "aws_s3_bucket_replication_configuration" "kwan_example" {
   role   = aws_iam_role.s3_role_kwan_example.arn
   rule {
     id     = "${local.kwan_example_name}-replication-id"
-    status = "Enabled"
+    status = "Disabled"
     destination {
       encryption_configuration {
         replica_kms_key_id = aws_kms_key.kwan_example_us_west_1_crr.arn
       }
       bucket = aws_s3_bucket.kwan_example_us_west_1_crr.arn
     }
+
     source_selection_criteria {
       sse_kms_encrypted_objects {
         status = "Enabled"
