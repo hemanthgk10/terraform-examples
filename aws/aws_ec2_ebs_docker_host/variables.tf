@@ -28,6 +28,7 @@ variable "hostname" {
 variable "instance_type" {
   description = "See https://aws.amazon.com/ec2/instance-types/ for options; for example, typical values for small workloads are `\"t2.nano\"`, `\"t2.micro\"`, `\"t2.small\"`, `\"t2.medium\"`, and `\"t2.large\"`"
   default     = "t3.micro"
+
 }
 
 variable "instance_ami" {
