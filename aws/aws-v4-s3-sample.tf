@@ -15,6 +15,7 @@ resource "aws_s3_bucket_versioning" "kwan_example" {
   }
 }
 
+
 resource "aws_s3_bucket_replication_configuration" "kwan_example" {
   bucket = local.kwan_example_name
   role   = aws_iam_role.s3_role_kwan_example.arn
