@@ -19,6 +19,7 @@ resource "aws_instance" "this" {
     user        = "${var.ssh_username}"
     private_key = "${file("${var.ssh_private_key_path}")}"
     agent       = true                                    # don't use SSH agent because we have the private key right here
+
   }
 
   provisioner "remote-exec" {
