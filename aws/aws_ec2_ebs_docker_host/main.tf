@@ -63,7 +63,7 @@ resource "null_resource" "provisioners" {
     host        = "${aws_instance.this.public_ip}"
     user        = "${var.ssh_username}"
     private_key = "${file("${var.ssh_private_key_path}")}"
-    agent       = true                                    # don't use SSH agent because we have the private key right here
+    agent       = false                                    # don't use SSH agent because we have the private key right here
   }
 
   # When creating the attachment
