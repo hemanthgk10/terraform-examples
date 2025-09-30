@@ -14,6 +14,7 @@ resource "aws_instance" "this" {
   root_block_device {
     volume_size = "${var.root_volume_size}"
 
+
   }
 
   connection {
