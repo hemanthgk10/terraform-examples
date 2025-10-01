@@ -5,6 +5,7 @@ resource "aws_s3_bucket" "kwan_example" {
 
 resource "aws_s3_bucket_acl" "kwan_example" {
   bucket = local.kwan_example_name
+
   acl    = "private"
 }
 
