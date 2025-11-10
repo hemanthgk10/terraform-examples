@@ -13,6 +13,7 @@ resource "aws_s3_bucket_versioning" "kwan_example" {
   bucket = local.kwan_example_name
   versioning_configuration {
     status = "Disabled"
+
   }
 }
 
