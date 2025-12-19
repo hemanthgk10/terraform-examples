@@ -3,6 +3,6 @@
     "readme": "node repotools/generate_readme.js"
   },
   "devDependencies": {
-    "glob": "^9.3.10"
+    "glob": "^9.3.11"
   }
 }
