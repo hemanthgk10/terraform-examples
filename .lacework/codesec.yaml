@@ -6,3 +6,5 @@ default:
       statusComments: all
     scan:
       terraform: true
+      exceptions:
+        - "path:suppression-test/*:Accepted risk"
