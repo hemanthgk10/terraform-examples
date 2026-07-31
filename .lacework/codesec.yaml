@@ -1,0 +1,10 @@
+default:
+  iac:
+    enabled: true
+    pullRequest:
+      statusCheck: any
+      statusComments: all
+    scan:
+      terraform: true
+      exceptions:
+        - "path:suppression-test/*:Accepted risk"
