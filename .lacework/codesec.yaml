@@ -1,0 +1,8 @@
+default:
+  iac:
+    enabled: true
+    pullRequest:
+      statusCheck: any
+      statusComments: all
+    scan:
+      terraform: true
