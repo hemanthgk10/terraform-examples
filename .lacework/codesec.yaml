@@ -1,0 +1,11 @@
+# COD-7036 test fixture. Intentionally mixed-case SCA severity values.
+# Before the fix, the strict schema enum rejects "Critical"/"High" and the
+# whole scan profile is dropped. After the fix, the read path coerces them to
+# lowercase and the severity filter is applied correctly.
+default:
+  sca:
+    enabled: true
+    scan:
+      severity:
+        - Critical
+        - High
