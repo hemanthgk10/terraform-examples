@@ -3,9 +3,9 @@ default:
     enabled: true
     pullRequest:
       statusCheck: high
-      statusComments: high
+      statusComments: none
   iac:
     enabled: true
     pullRequest:
       statusCheck: disabled
-      statusComments: high
+      statusComments: none
