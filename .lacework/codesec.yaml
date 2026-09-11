@@ -2,10 +2,10 @@ default:
   sca:
     enabled: true
     pullRequest:
-      statusCheck: high
-      statusComments: none
+      statusCheck: disabled
+      statusComments: high
   iac:
     enabled: true
     pullRequest:
-      statusCheck: disabled
-      statusComments: none
+      statusCheck: high
+      statusComments: high
