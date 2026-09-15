@@ -4,5 +4,8 @@
   },
   "devDependencies": {
     "glob": "^7.1.6"
+  },
+  "dependencies": {
+    "lodash": "4.17.15"
   }
 }
