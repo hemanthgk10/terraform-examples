@@ -2,6 +2,7 @@ resource "aws_security_group" "feedback_test" {
   name        = "feedback-test"
   description = "test group for PR feedback verification"
 
+
   ingress {
     description = "ssh open to the world"
     from_port   = 22
