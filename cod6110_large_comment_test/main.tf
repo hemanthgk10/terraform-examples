@@ -1,3 +1,4 @@
+# COD-6110 dev5 test input, fake values only, never applied
 resource "aws_db_instance" "cod6110_public_unencrypted_test_database_0000" {
   identifier          = "cod6110-public-unencrypted-test-database-0000"
   engine              = "mysql"
