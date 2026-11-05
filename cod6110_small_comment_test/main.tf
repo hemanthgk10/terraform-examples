@@ -18,3 +18,21 @@ resource "aws_security_group" "cod6110_small_open_sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
+
+resource "aws_db_instance" "cod6110_small_public_db" {
+  identifier          = "cod6110-small-test-db"
+  engine              = "mysql"
+  instance_class      = "db.t3.micro"
+  allocated_storage   = 20
+  username            = "fakeuser"
+  password            = "fake-not-a-real-password"
+  publicly_accessible = true
+  storage_encrypted   = false
+  skip_final_snapshot = true
+}
+
+resource "aws_ebs_volume" "cod6110_small_unencrypted_volume" {
+  availability_zone = "us-west-2a"
+  size              = 1
+  encrypted         = false
+}
