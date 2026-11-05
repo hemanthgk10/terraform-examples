@@ -1,3 +1,4 @@
+# COD-6110 dev5 test input, deliberately misconfigured, fake values only, never applied
 resource "aws_s3_bucket" "cod6110_small_public_bucket_a" {
   bucket = "cod6110-small-test-bucket-a"
   acl    = "public-read-write"
